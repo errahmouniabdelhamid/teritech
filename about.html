@@ -1,0 +1,426 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://kit.fontawesome.com/cda4e3eb33.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="./src/main.js"></script>
+    <title>TeriTech</title>
+
+</head>
+
+<body>
+    <header class=" md:fixed flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm ">
+        <nav class="mt-2 relative max-w-7xl w-full bg-[#002B38] border border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto " aria-label="Global ">
+            <div class="flex items-center justify-between ">
+                <a class="flex-none text-xl text-white font-semibold " href="# " aria-label="Brand ">TeriTech</a>
+                <div x-data="{ open: false } " class="lg:hidden ">
+                    <!-- Bouton de menu mobile -->
+                    <button type="button " @click="open=! open " class="absolute top-4 right-2 bg-none border-none cursor-pointer ">
+                        <svg class="w-6 h-6 text-white " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
+                            <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M4 6h16M4 12h16m-7 6h7 "></path>
+                        </svg>
+                        
+                     </button>
+
+                    <template x-if="open ">
+                         <div  @click.away="open=false "                             
+                              class="absolute top-16 right-4 bg-[#002B38] border-1 border-gray-600 h-[70vh] w-[50vw] rounded-lg p-2 z-50 ">
+                             <!-- Menu Items -->
+                             <a href="./index.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Home</a>
+                             <a href="./test.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Nos services</a>
+                             <a href="./about.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Qui sommes-nous</a>
+                             <a href="./blog.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Blog</a>
+                             <a href="./contact.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Contact</a>
+                         </div>
+                     </template>
+                </div>
+            </div>
+            <!-- Menu mobile -->
+            <div id="navbar-collapse-with-animation " class="font-bold hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:block " x-show="open ">
+                <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 ">
+                    <a href="./index.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Home</a>
+                    <a href="./test.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Nos services</a>
+                    <a href="./about.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Qui sommes-nous</a>
+                    <a href="./blog.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Blog</a>
+                    <a href="./contact.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 md:py-12 lg:pb-20 lg:pt-32  ">
+        <div class=" md:grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:text-start text-center justify-center items-center ">
+            <div data-aos="fade-right" data-aos-duration="2000">
+                <h1 class="block text-3xl font-bold text-[#002B38] text-start sm:text-4xl lg:text-6xl lg:leading-tight ">Innovation numérique garantie</h1>
+                <p class="mb-8 pt-10 text-xl text-black font-sm leading-tight ">Here at Flowbite we focus on markets where technology, innovation, and capital can <span class="pt-8 "> unlock long-term value and drive
+                        economic growth.</span></p>
+
+            </div>
+            <div class="relative ms-4 " data-aos="fade-left" data-aos-duration="2000">
+                <img class="w-full rounded-md " src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " alt="Image Description ">
+                <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 ">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Blog Article -->
+    <div class="max-w-7xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-8">
+        <div class="space-y-5 md:space-y-8">
+            <div class="md:grid md:grid-cols-2">
+
+                <figure class="hidden md:block shrink-0" data-aos="fade-up-right" data-aos-duration="2000">
+                    <img class="w-auto  object-cover rounded-xl  " src="https://media.istockphoto.com/id/1454435758/photo/telemarketing-training-and-black-woman-coaching-team-of-men-at-customer-service-agency.jpg?s=1024x1024&w=is&k=20&c=e4Bi_20LSfwR7YT3pqCTO93cQqD1cGYm6qCgVZsNjtA="
+                        alt=" Image Description ">
+                </figure>
+                <div data-aos="fade-up-left" data-aos-duration="2000" class="md:ml-20" x-data="{open: false}" x-cloak>
+                    <div>
+                        <h2 class="text-xl md:text-3xl font-bold lg:text-5xl mb-8 text-[#002B38] ">Qui sommes-nous</h2>
+                        <p class="text-lg text-black  pt-2">
+                            Teritech se distingue en tant que pionnier innovant dans le domaine du conseil stratégique, spécialisé en marketing territorial et digital. Notre mission chez Teritech est de transformer les territoires et les organisations en exploitant la puissance
+                            du numérique et les stratégies de marketing avancées. En matière de Stratégie Territoriale et Intelligence Économique, notre approche personnalisée combine analyse de marché de pointe et veille stratégique, fournissant à nos
+                            clients des insights précieux pour guider leurs décisions et stratégies de développement...
+                        </p>
+                        <div x-show="!open">
+                            <button class="text-[#007030] " x-on:click="open = true">Lire plus</button>
+                        </div>
+
+                    </div>
+                    <div x-show="open">
+                        <p class="text-lg text-black  ">Dans le secteur de l'Innovation et du Développement Digital, Teritech est à la forefrontière de la création de solutions digitales sur mesure et de l'adoption de technologies émergentes, visant à rendre les territoires plus attractifs,
+                            connectés et durables. Notre expertise en Marketing Stratégique et Branding Territorial repose sur le développement d'identités de marque uniques et l'orchestration de campagnes de communication efficaces, tout en favorisant
+                            un engagement profond des communautés pour transformer chaque individu en ambassadeur enthousiaste de leur environnement.</p>
+                        <p class="text-lg text-black  ">À travers notre pôle de Formation, Accompagnement et Gestion de la Connaissance, Teritech s'engage à élever les compétences et les capacités des équipes et des dirigeants, en offrant des ateliers sur mesure, du coaching stratégique
+                            et des plateformes collaboratives, pour encourager un environnement d'innovation et d'apprentissage continu.</p>
+                        <button class="text-[#007030] " x-on:click="open = false">
+                            Lire moins
+                        </button>
+                    </div>
+
+                </div>
+                <figure class="md:hidden block shrink-0" data-aos="fade-up-right" data-aos-duration="2000">
+                    <img class="w-auto  object-cover rounded-xl  " src="https://media.istockphoto.com/id/1454435758/photo/telemarketing-training-and-black-woman-coaching-team-of-men-at-customer-service-agency.jpg?s=1024x1024&w=is&k=20&c=e4Bi_20LSfwR7YT3pqCTO93cQqD1cGYm6qCgVZsNjtA="
+                        alt=" Image Description ">
+                </figure>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="max-w-7xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-8">
+        <div class=" md:grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 text-start justify-center items-center ">
+            <div data-aos="fade-down-right" data-aos-duration="2000">
+                <h1 class="block text-3xl font-bold text-[#002B38] sm:text-4xl lg:text-5xl lg:leading-tight ">Teritech n'est pas juste un cabinet de conseil</h1>
+                <p class="mb-8 pt-10 text-xl text-black font-sm leading-tight  w-3/4">nous sommes votre partenaire stratégique pour naviguer dans le paysage complexe du développement territorial et digital, en co-créant des solutions innovantes et durables. </p>
+
+            </div>
+            <div class="relative ms-4 " data-aos="fade-down-left" data-aos-duration="900">
+                <img class="w-full rounded-md " src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " alt="Image Description ">
+                <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 ">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Blog Article -->
+
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto" data-aos="fade-up" data-aos-duration="2000">
+        <div class="relative p-6 md:p-16">
+            <!-- Grid -->
+            <div class="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
+                <div class="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
+                    <h2 class="text-3xl text-[#002B38] font-bold sm:text-3xl " data-aos="zoom-in-left" data-aos-duration="2000">
+                        Nos valeurs
+                    </h2>
+
+                    <!-- Tab Navs -->
+                    <nav data-aos="zoom-right" data-aos-duration="2000" class="grid gap-4 mt-5 md:mt-10" aria-label="Tabs" role="tablist">
+                        <button data-aos="zoom-in-right" data-aos-duration="2000" type="button" class="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 p-4 md:p-5 rounded-xl    active" id="tabs-with-card-item-1"
+                            data-hs-tab="#tabs-with-card-1" aria-controls="tabs-with-card-1" role="tab">
+                            <span class="flex">
+                                <svg data-aos="zoom-in-right" data-aos-duration="2000"
+                                    class="flex-shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-[#00AF4F] text-[#007030] "
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+                                    <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+                                    <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+                                    <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
+                                    <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+                                </svg>
+                                <span class="grow ms-6">
+                                    <span
+                                        class="block text-lg font-semibold hs-tab-active:text-[#00AF4F] text-[#007030]  ">Excellence</span>
+                                    <span class="block mt-1 text-black  ">Engagement envers des normes élevées de
+                                        qualité et de performance.</span>
+                                    <span class="block mt-1 text-black  ">Recherche constante de l'amélioration et de
+                                        l'innovation.</span>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button data-aos="zoom-in-right" data-aos-duration="2000" type="button" class="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 p-4 md:p-5 rounded-xl   " id="tabs-with-card-item-2" data-hs-tab="#tabs-with-card-2"
+                            aria-controls="tabs-with-card-2" role="tab">
+                            <span class="flex">
+                                <svg data-aos="zoom-in-right" data-aos-duration="2000"
+                                    class="flex-shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-[#00AF4F] text-[#007030]  "
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m12 14 4-4" />
+                                    <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+                                </svg>
+                                <span class="grow ms-6">
+                                    <span
+                                        class="block text-lg font-semibold hs-tab-active:text-[#00AF4F] text-[#007030]  ">Intégrité</span>
+                                    <span class="block mt-1 text-black  ">Respect des principes éthiques et des normes
+                                        professionnelles.</span>
+                                    <span class="block mt-1 text-black  ">Transparence dans toutes les interactions et
+                                        transactions.</span>
+                                </span>
+                            </span>
+                        </button>
+
+                        <button data-aos="zoom-in-right" data-aos-duration="2000" type="button" class="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 p-4 md:p-5 rounded-xl   " id="tabs-with-card-item-3" data-hs-tab="#tabs-with-card-3"
+                            aria-controls="tabs-with-card-3" role="tab">
+                            <span class="flex">
+                                <svg data-aos="zoom-in-right" data-aos-duration="2000"
+                                    class="flex-shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-[#00AF4F] text-[#007030]  "
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                                    <path d="M5 3v4" />
+                                    <path d="M19 17v4" />
+                                    <path d="M3 5h4" />
+                                    <path d="M17 19h4" />
+                                </svg>
+                                <span class="grow ms-6">
+                                    <span
+                                        class="block text-lg font-semibold hs-tab-active:text-[#00AF4F] text-[#007030] ">Engagement</span>
+                                    <span class="block mt-1 text-black  ">Priorité absolue donnée aux besoins et aux
+                                        objectifs des clients .</span>
+                                    <span class="block mt-1 text-black  ">Contribution positive au développement durable
+                                        des territoires.</span>
+                                </span>
+                            </span>
+                        </button>
+                    </nav>
+                    <!-- End Tab Navs -->
+                </div>
+                <!-- End Col -->
+
+                <div class="lg:col-span-6">
+                    <div class="relative">
+                        <!-- Tab Content -->
+                        <div data-aos="zoom-left" data-aos-duration="2000">
+                            <div data-aos="zoom-in-left" data-aos-duration="2000" id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1">
+                                <img class="shadow-xl shadow-gray-200 rounded-xl " src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80" alt="Image Description">
+                            </div>
+
+                            <div data-aos="zoom-in-right" data-aos-duration="2000" id="tabs-with-card-2" class="hidden" role="tabpanel" aria-labelledby="tabs-with-card-item-2">
+                                <img class="shadow-xl shadow-gray-200 rounded-xl " src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80" alt="Image Description">
+                            </div>
+
+                            <div id="tabs-with-card-3" class="hidden" role="tabpanel" aria-labelledby="tabs-with-card-item-3">
+                                <img data-aos="zoom-in-left" data-aos-duration="2000" class="shadow-xl shadow-gray-200 rounded-xl " src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
+                                    alt="Image Description">
+                            </div>
+                        </div>
+                        <!-- End Tab Content -->
+
+                        <!-- SVG Element -->
+                        <div class="hidden absolute top-0 end-0 translate-x-20 md:block lg:translate-x-20">
+                            <!--<svg class="w-16 h-auto text-orange-500" width="121" height="135" viewBox="0 0 121 135" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                            <path d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+                            <path d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+                            <path d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <!-- End SVG Element -->
+                    </div>
+                </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Grid -->
+
+            <!-- Background Color -->
+            <div class="absolute inset-0 grid grid-cols-12 size-full">
+                <div class="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full">
+                </div>
+            </div>
+            <!-- End Background Color -->
+        </div>
+    </div>
+    <!-- End Features -->
+    <!-- End Features -->
+
+    <!-- End Icon Blocks -->
+
+
+    <!-- Team -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto ">
+        <!-- Title -->
+        <div data-aos="fade-down" class=" max-w-2xl mx-auto text-center mb-10 lg:mb-14 ">
+            <h2 class="text-3xl font-bold md:text-4xl md:leading-tight text-[#002B38] ">Notre équipe</h2>
+        </div>
+        <!-- End Title -->
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+
+
+            <div data-aos="fade-up" data-aos-duration="3000" class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 ">
+                <div class="flex items-center gap-x-4 ">
+                    <img class="rounded-full size-20 " src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80 " alt="Image
+            Description ">
+                    <div class="grow ">
+                        <h3 class="font-medium text-xl text-black ">
+                            Maria Powers
+                        </h3>
+                        <p class="text-xs uppercase text-[#00657C] ">
+                            Director of sales
+                        </p>
+                    </div>
+                </div>
+
+                <p class="mt-3 text-black ">
+                    I am an ambitious workaholic, but apart from that, pretty simple person.
+                </p>
+
+
+            </div>
+            <!-- End Col -->
+
+            <div data-aos="fade-up" data-aos-duration="3000" class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 ">
+                <div class="flex items-center gap-x-4 ">
+                    <img class="rounded-full size-20 " src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80 " alt="Image
+            Description ">
+                    <div class="grow ">
+                        <h3 class="font-medium text-xl text-black">
+                            Delia Pawelke
+                        </h3>
+                        <p class="text-xs uppercase text-[#00657C] ">
+                            Front-end Developer
+                        </p>
+                    </div>
+                </div>
+
+                <p class="mt-3 text-black ">
+                    I am an ambitious workaholic, but apart from that, pretty simple person.
+                </p>
+
+            </div>
+            <!-- End Col -->
+
+            <div data-aos="fade-up" data-aos-duration="3000" class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 ">
+                <div class="flex items-center gap-x-4 ">
+                    <img class="rounded-full size-20 " src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80 " alt="Image
+            Description ">
+                    <div class="grow ">
+                        <h3 class="font-medium text-xl text-black">
+                            Tom Lowry
+                        </h3>
+                        <p class="text-xs uppercase text-[#00657C] ">
+                            UI/UX Designer
+                        </p>
+                    </div>
+                </div>
+
+                <p class="mt-3 text-black ">
+                    I am an ambitious workaholic, but apart from that, pretty simple person.
+                </p>
+
+            </div>
+            <!-- End Col -->
+
+        </div>
+        <!-- End Grid -->
+    </div>
+    <!-- End Team -->
+
+
+
+    <footer class="bg-[#002B38]  py-10 md:py-0 mt-0 md:my-0 md:mt-10 w-full">
+        <div class="w-full  sm:px-6  md:pb-6 md:pt-20 mx-auto">
+            <div class="md:grid md:grid-cols-2 lg:grid-cols-5 ">
+                <div>
+
+                    <div class="md:col-span-full lg:col-span-1 md:ml-0 ml-20 md:mt-0 mt-6">
+                        <a class=" flex-none text-5xl font-semibold text-white  " href="#" aria-label="Logo">TeriTech</span></a>
+                    </div>
+                    <div class="mt-5 md:ml-0 ml-20 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-white">© 2024 Teritech. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-1 lg:ml-40 mt-6 ">
+                    <h4 class="font-semibold text-white text-3xl ">Contact</h4>
+
+                    <div class="mt-3 grid space-y-3 lg:w-40 ">
+                        <p><a class="text-md  inline-flex gap-x-2 text-white" href="#">Tél:06060606</a></p>
+                        <p><a class="text-md  w-80 inline-flex gap-x-2 text-white" href="#">E-mail :email@gmail.com</a></p>
+                        <p><a class="text-md  inline-flex gap-x-2 text-white" href="#">Adresse:Rue xx city</a></p>
+                    </div>
+                </div>
+                <div class="md:col-span-1 lg:ml-56 mt-6">
+                    <h4 class="font-semibold text-white text-3xl ">Compagnie</h4>
+
+                    <div class="mt-3 grid space-y-3 lg:mr-20 lg:w-40 ">
+                        <p><a class="text-md text-white inline-flex gap-x-2 " href="#">Home</a></p>
+                        <p><a class="text-md text-white  inline-flex gap-x-2 " href="#">About</a></p>
+                        <p>
+                            <a class="text-md text-white  inline-flex gap-x-2 " href="#">Blog</a>
+                        </p>
+                        <p>
+                            <a class="text-md text-white  inline-flex gap-x-2 " href="#">Cantact</a>
+                        </p>
+                    </div>
+                </div>
+                <!------------------------------->
+                <div class=" lg:w-80 lg:ml-56 mt-6">
+                    <h4 class="font-semibold text-white text-3xl ">Abonnée vous</h4>
+
+                    <div class="flex flex-row justify-center items-center mr-40 pt-12">
+                        <a class=" m-4 mt-35 text-2xl text-white" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class=" m-4  mt-35 text-2xl text-white" href="#"><i class="fab fa-facebook"></i></a>
+                        <a class=" m-4  mt-35 text-2xl text-white" href="#"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                </div>
+                <!----------------------------------------------->
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+
+            once: 'true',
+        })
+    </script>
+
+    <script type="module " src="./src/main.js "></script>
+</body>
+
+</html>

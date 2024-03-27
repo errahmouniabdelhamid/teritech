@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://kit.fontawesome.com/cda4e3eb33.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./src/main.js"></script>
+    <title>TeriTech</title>
+
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class=" md:fixed flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm ">
+        <nav class="mt-2 relative max-w-7xl w-full bg-[#002B38] border border-gray-200 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto " aria-label="Global ">
+            <div class="flex items-center justify-between ">
+                <a class="flex-none text-xl text-white font-semibold " href="# " aria-label="Brand ">TeriTech</a>
+                <div x-data="{ open: false } " class="lg:hidden ">
+                    <!-- Bouton de menu mobile -->
+                    <button type="button " @click="open=! open " class="absolute top-4 right-2 bg-none border-none cursor-pointer ">
+                        <svg class="w-6 h-6 text-white " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
+                            <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M4 6h16M4 12h16m-7 6h7 "></path>
+                        </svg>
+                        
+                     </button>
+
+                    <template x-if="open ">
+                         <div  @click.away="open=false "                             
+                              class="absolute top-16 right-4 bg-[#002B38] border-1 border-gray-600 h-[70vh] w-[50vw] rounded-lg p-2 z-50 ">
+                             <!-- Menu Items -->
+                             <a href="./index.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Home</a>
+                             <a href="./test.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Nos services</a>
+                             <a href="./about.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Qui sommes-nous</a>
+                             <a href="./blog.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Blog</a>
+                             <a href="./contact.html" class="block px-7 py-2 font-bold text-white hover:text-[#00AF4F] ">Contact</a>
+                         </div>
+                     </template>
+                </div>
+            </div>
+            <!-- Menu mobile -->
+            <div id="navbar-collapse-with-animation " class="font-bold hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:block " x-show="open ">
+                <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 ">
+                    <a href="./index.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Home</a>
+                    <a href="./test.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Nos services</a>
+                    <a href="./about.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Qui sommes-nous</a>
+                    <a href="./blog.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Blog</a>
+                    <a href="./contact.html" class="block  md:px-2 md:py-6 font-bold text-white hover:text-[#00AF4F] ">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-6 lg:px-8 py-10 md:py-32 lg:py-40">
+        <div class="md:grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:text-start text-center justify-center items-center">
+            <div data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="200" data-aos-duration="2000">
+                <h1 class="block text-3xl font-bold text-[#002B38] sm:text-4xl lg:text-5xl lg:leading-tight">Trasformez votre vision en succèes numérique <span class="text-[#00657C]">aujourd'hui</span></h1>
+                <div class="my-7 md:grid md:gap-3   sm:inline-flex">
+                    <a class="py-3 w-40 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent  bg-[#007030] text-white hover:bg-[#00AF4F] disabled:opacity-50 disabled:pointer-events-none" href="#">
+                        Get started
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="relative ms-4">
+                <img data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="200" data-aos-duration="2000" class="w-full rounded-md" src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Image Description">
+                <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="3000">
+
+        <div class="w-full">
+            <svg class="w-full h-48 fill-blue-200 -mb-[.5px]" preserveAspectRatio="none" viewBox="0 0 100 100" fill="currentcolor">
+            <polygon points="0,0 0,100 100,100"></polygon>
+        </svg>
+        </div>
+        <div class="bg-blue-200">
+            <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+                <div data-aos="fade-up" data-aos-duration="3000" class="mx-auto max-w-2xl mb-8 lg:mb-14 text-center">
+                    <h2 class="text-3xl lg:text-4xl text-[#00657C] font-bold">
+                        TeriTech
+                    </h2>
+                    <p class="mt-3 text-black">
+                        TeriTech strategy est un leader en conseil stratégique et marketing territorial, transformant les territoires via le numérique et des stratégies innovantes. Leur approche allie analyse de marché pointue, création de solutions digitales sur mesure et développement
+                        d'identités de marque uniques. En offrant des formations personnalisées et du coaching stratégique, TeriTech vise à renforcer les compétences et à favoriser l'innovation pour façonner l'avenir des territoires.
+                    </p>
+                </div>
+                <div class="mx-auto max-w-3xl grid grid-cols-12 gap-6 lg:gap-8">
+                    <!-- Icon Block -->
+                    <div class="col-span-6 sm:col-span-4 text-center">
+                        <svg class="mx-auto h-auto w-7 md:w-9 text-gray-800" xmlns="https://media.istockphoto.com/id/1347652268/photo/group-of-colleagues-celebrating-success.jpg?s=1024x1024&w=is&k=20&c=qfSzD8iWx_x8fBE4Lo3moBjmGm_eXdU36Vj283VX1w8=" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="10" height="14" x="3" y="8" rx="2" />
+                        <path d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4" />
+                        <path d="M8 18h.01" />
+                    </svg>
+                        <div class="mt-2 sm:mt-6">
+                            <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="text-lg font-semibold text-black">
+                                Responsive
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-span-6 sm:col-span-4 text-center">
+                        <svg class="mx-auto h-auto w-7 md:w-9 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 7h-9" />
+                        <path d="M14 17H5" />
+                        <circle cx="17" cy="17" r="3" />
+                        <circle cx="7" cy="7" r="3" />
+                    </svg>
+                        <div class="mt-2 sm:mt-6">
+                            <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="text-lg font-semibold text-black">
+                                Customizable
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-span-6 col-start-4 sm:col-span-4 text-center">
+                        <svg class="mx-auto h-auto w-7 md:w-9 text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
+                        <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+                    </svg>
+                        <div class="mt-2 sm:mt-6">
+                            <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="text-lg font-semibold text-black">
+                                24/7 Support
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-20 grid grid-cols-12 items-center gap-x-2 sm:gap-x-6 lg:gap-x-8">
+                    <div class="hidden md:block col-span-4 md:col-span-3">
+                        <img data-aos="fade-right" class="rounded-xl" src="https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1981&q=80" alt="Image Description">
+                    </div>
+                    <div class="col-span-4 md:col-span-3">
+                        <img data-aos="fade-right" class="rounded-xl" src="https://images.unsplash.com/photo-1587613991119-fbbe8e90531d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1003&q=80" alt="Image Description">
+                    </div>
+
+                    <div class="col-span-4 md:col-span-3">
+                        <img data-aos="fade-up-left" class="rounded-xl" src="https://images.unsplash.com/photo-1554295405-abb8fd54f153?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=652&q=80" alt="Image Description">
+                    </div>
+
+
+                    <div class="col-span-4 md:col-span-3">
+                        <img data-aos="fade-down-left" class="rounded-xl" src="https://images.unsplash.com/photo-1640622300473-977435c38c04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80" alt="Image Description">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="w-full">
+            <svg class="w-full h-48 rotate-180 fill-blue-200" preserveAspectRatio="none" viewBox="0 0 100 100" fill="currentcolor">
+            <polygon points="0,100 100,100 100,0"></polygon>
+        </svg>
+        </div>
+    </div>
+
+
+
+    <div class="md:px-20  px-2 pt-8">
+        <h1 data-aos="fade-up" data-aos-duration="3000" class="font-extrabold leading-tight  lg:leading-relaxed	 formt text-7xl md:text-4xl text-[#002B38] tracking-tight  md:ml-79 pb-6 md:px-20 text-center justify-center items-center">
+            Conjuguer l’innovation <br><span class="text-[#00657C]">
+                la stratégie et le numérique pour l'excellence.
+            </span></h1>
+    </div>
+
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="mx-5 grid md:grid-cols-2 items-center gap-2">
+
+            <a class="group flex flex-col justify-center hover:bg-gray-50 rounded-xl p-4 md:p-7" href="#">
+                <div data-aos="fade-up" data-aos-duration="3000" class="mx-5 flex justify-center items-center size-12  bg-[#00657C] rounded-xl">
+                    <svg class=" flex-shrink-0 size-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="10" height="14" x="3" y="8" rx="2" />
+                        <path d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4" />
+                        <path d="M8 18h.01" />
+                    </svg>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" class="mt-5 max-h-50">
+                    <h3 class="mx-5 group-hover:text-[#00AF4F] text-lg font-semibold text-[#007030]">stratégie Territoriale et Intelligence Economoque</h3>
+                    <p class="mt-1 mx-5 text-black">Combinaison d'analyses territoriales, veille stratégique et intelligence économique pour évaluer les performances, détecter les opportunités et favoriser l'adaptation stratégique.
+                    </p>
+                    <span class="mt-2 mx-5 inline-flex items-center gap-x-1.5 text-sm text-[#00AF4F] decoration-2 group-hover:underline font-medium">
+                        Learn more
+                        <svg class=" flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </span>
+                </div>
+            </a>
+            <a class="group flex flex-col justify-center hover:bg-gray-50 rounded-xl p-4 md:p-7" href="#">
+                <div data-aos="fade-up" data-aos-duration="3000" class="mx-5 flex justify-center items-center size-12  bg-[#00657C] rounded-xl">
+                    <svg class=" flex-shrink-0 size-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 7h-9" />
+                        <path d="M14 17H5" />
+                        <circle cx="17" cy="17" r="3" />
+                        <circle cx="7" cy="7" r="3" />
+                    </svg>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" class="mt-5 max-h-50">
+                    <h3 class="mx-5 group-hover:text-[#00AF4F] text-lg font-semibold text-[#007030]">Innovation et Développement Digital</h3>
+                    <p class="mt-1 mx-5 text-black">Conception personnalisée de plateformes digitales territoriales, déploiement de technologies émergentes pour améliorer l'attractivité et durabilité, et élaboration de stratégies de contenu digital pour accroître la visibilité en ligne
+                        des territoires et organisations.
+                    </p>
+                    <span class="mt-2 mx-5 inline-flex items-center gap-x-1.5 text-sm text-[#00AF4F] decoration-2 group-hover:underline font-medium">
+                        Learn more
+                        <svg class=" flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </span>
+                </div>
+            </a>
+            <a class="group flex flex-col justify-center hover:bg-gray-50 rounded-xl p-4 md:p-7" href="#">
+                <div data-aos="fade-up" data-aos-duration="3000" class="mx-5 flex justify-center items-center size-12  bg-[#00657C] rounded-xl">
+                    <svg class="flex-shrink-0 size-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                    </svg>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" class="mt-5">
+                    <h3 class="mx-5 group-hover:text-[#00AF4F] text-lg font-semibold text-[#007030]">Marketing Stratégique et Branding Territorial</h3>
+                    <p class="mt-1 mx-5 text-black">Création d'une identité territoriale distinctive, communication multicanal et mobilisation des communautés pour renforcer l'image de marque et l'engagement, favorisant ainsi le développement économique local.</p>
+                    <span class="mt-2 mx-5 inline-flex items-center gap-x-1.5 text-sm text-[#00AF4F] decoration-2 group-hover:underline font-medium">
+                        Learn more
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </span>
+                </div>
+            </a>
+            <a class="group flex flex-col justify-center hover:bg-gray-50 rounded-xl p-4 md:p-7" href="#">
+                <div data-aos="fade-up" data-aos-duration="3000" class="mx-5 flex justify-center items-center size-12 bg-[#00657C] rounded-xl">
+                    <svg class="flex-shrink-0 size-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
+                        <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+                    </svg>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" class="mt-5">
+                    <h3 class="mx-5 group-hover:text-[#00AF4F] text-lg font-semibold text-[#007030]">Formation, Accompagnement et Gestion de la Connaissance</h3>
+                    <p class="mt-1 mx-5 text-black">Organisation de formations adaptées, coaching pour renforcer les capacités opérationnelles, et développement de plateformes collaboratives pour favoriser l'innovation et le développement professionnel.
+                    </p>
+                    <span class="mt-2 mx-5 inline-flex items-center gap-x-1.5 text-sm text-[#00AF4F] decoration-2 group-hover:underline font-medium">
+                        Learn more
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div data-aos="fade-up" data-aos-duration="3000" class=" flex flex-col md:flex-row m-4 md:m-20 rounded-xl   py-10 md:px-12 p-4" style="background-image: url('/src/c.png');background-repeat: no-repeat; background-size :cover;">
+        <div class="md:w-3/5  my-12 ">
+            <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" class="font-extrabold formt text-4xl text-[#00657C] leading-snug md:text-start md:items-start md:justify-start text-center items-cetext-center justify-cetext-center">
+                Transformez votre vision en résultats Tangibles avec notre aprproche Satratégique <br>digitale</h1>
+            <br>
+        </div>
+
+        <form class="md:w-2/4 w-full border-gray-200  md:ml-56 " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+            <P class="text-[#002B38]  text-4xl font-medium mb-6 text-center">Contactez-nous</P>
+            <div class="mb-5 ">
+                <label for="email " class="block mb-2 text-sm font-semibold text-[#002B38]  ">Prénom</label>
+                <input type="email " id="email " class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required />
+            </div>
+            <div class="mb-5 ">
+                <label for="email " class="block mb-2 text-sm font-semibold text-[#002B38]  ">Téléphone</label>
+                <input type="email " id="email " class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required />
+            </div>
+            <div class="mb-5 ">
+                <label for="password " class="block mb-2 text-sm font-semibold text-[#002B38]  ">E-mail</label>
+                <input type="password " id="password " class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required />
+            </div>
+            <div class="w-full ">
+
+                <button type="submit " class=" text-white w-full bg-[#007030] hover:bg-[#00AF4F] focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center transition delay-150 duration-300 ease-in-out ">Envoyer</button>
+            </div>
+        </form>
+    </div>
+
+
+    <footer class="bg-[#002B38]  py-10 md:py-0 mt-0 md:my-0 md:mt-10 w-full">
+        <div class="w-full  sm:px-6  md:pb-6 md:pt-20 mx-auto">
+            <div class="md:grid md:grid-cols-2 lg:grid-cols-5 ">
+                <div>
+
+                    <div class="md:col-span-full lg:col-span-1 md:ml-0 ml-20 md:mt-0 mt-6">
+                        <a class=" flex-none text-5xl font-semibold text-white  " href="#" aria-label="Logo">TeriTech</span></a>
+                    </div>
+                    <div class="mt-5 md:ml-0 ml-20 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm text-white">© 2024 Teritech. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-1 lg:ml-40 mt-6 ">
+                    <h4 class="font-semibold text-white text-3xl ">Contact</h4>
+
+                    <div class="mt-3 grid space-y-3 lg:w-40 ">
+                        <p><a class="text-md  inline-flex gap-x-2 text-white" href="#">Tél:06060606</a></p>
+                        <p><a class="text-md  w-80 inline-flex gap-x-2 text-white" href="#">E-mail :email@gmail.com</a></p>
+                        <p><a class="text-md  inline-flex gap-x-2 text-white" href="#">Adresse:Rue xx city</a></p>
+                    </div>
+                </div>
+                <div class="md:col-span-1 lg:ml-56 mt-6">
+                    <h4 class="font-semibold text-white text-3xl ">Compagnie</h4>
+
+                    <div class="mt-3 grid space-y-3 lg:mr-20 lg:w-40 ">
+                        <p><a class="text-md text-white inline-flex gap-x-2 " href="#">Home</a></p>
+                        <p><a class="text-md text-white  inline-flex gap-x-2 " href="#">About</a></p>
+                        <p>
+                            <a class="text-md text-white  inline-flex gap-x-2 " href="#">Blog</a>
+                        </p>
+                        <p>
+                            <a class="text-md text-white  inline-flex gap-x-2 " href="#">Cantact</a>
+                        </p>
+                    </div>
+                </div>
+                <!------------------------------->
+                <div class=" lg:w-80 lg:ml-56 mt-6">
+                    <h4 class="font-semibold text-white text-3xl ">Abonnée vous</h4>
+
+                    <div class="flex flex-row justify-center items-center mr-40 pt-12">
+                        <a class=" m-4 mt-35 text-2xl text-white" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class=" m-4  mt-35 text-2xl text-white" href="#"><i class="fab fa-facebook"></i></a>
+                        <a class=" m-4  mt-35 text-2xl text-white" href="#"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                </div>
+                <!----------------------------------------------->
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            once: 'true',
+        });
+    </script>
+
+</body>
+
+</html>
