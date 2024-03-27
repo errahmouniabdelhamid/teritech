@@ -1,5 +1,3 @@
-// import 'preline';
-
 import Alpine from 'alpinejs';
 import 'preline';
 
